@@ -238,7 +238,7 @@ class _ItemTagsState extends State<ItemTags> {
                 borderRadius: widget.borderRadius ??
                     BorderRadius.circular(_initBorderRadius)),
             padding: widget.padding * (fontSize / 14),
-            child: _combine),
+            child: combined),
         onTap: widget.pressEnabled
             ? () {
                 if (widget.singleItem) {
@@ -266,7 +266,7 @@ class _ItemTagsState extends State<ItemTags> {
     );
   }
 
-  Widget get _combine {
+  Widget get combined {
     if (widget.image != null)
       assert((widget.image.image != null && widget.image.child == null) ||
           (widget.image.child != null && widget.image.image == null));
